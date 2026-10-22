@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mukhlisul Amal – Portofolio Siswa TKJ</title>
+  <meta name="description" content="Portofolio Mukhlisul Amal, siswa kelas 12 jurusan Teknik Komputer dan Jaringan.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#F3F6F8',   // latar utama
+            ink: '#14213D',     // teks & garis
+            cable: {
+              orange: '#E8851C', // kabel UTP oranye
+              blue: '#2F6FDE',   // kabel UTP biru
+              green: '#2E9B5B'   // kabel UTP hijau
+            }
+          },
+          fontFamily: {
+            display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
+            body: ['"Instrument Sans"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Instrument Sans', system-ui, sans-serif; }
+    h1, h2, h3 { font-family: 'Bricolage Grotesque', system-ui, sans-serif; }
+
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid #2F6FDE;
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* Garis kabel di sisi kiri tiap bagian */
+    .kabel { border-left: 6px solid; }
+  </style>
+</head>
+
+<body class="bg-paper text-ink antialiased">
+
+  <!-- NAVIGASI -->
+  <header class="sticky top-0 z-30 bg-paper/90 backdrop-blur border-b border-ink/10">
+    <nav class="max-w-5xl mx-auto px-5 py-3 flex items-center justify-between" aria-label="Navigasi utama">
+      <a href="#beranda" class="font-display font-extrabold text-lg">Mukhlisul Amal</a>
+      <ul class="flex gap-5 text-sm font-medium">
+        <li><a class="hover:text-cable-blue" href="#tentang">Tentang</a></li>
+        <li><a class="hover:text-cable-blue" href="#keahlian">Keahlian</a></li>
+        <li><a class="hover:text-cable-blue" href="#proyek">Proyek</a></li>
+        <li><a class="hover:text-cable-blue" href="#pkl">PKL</a></li>
+        <li><a class="hover:text-cable-blue" href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- BERANDA -->
+    <section id="beranda" class="max-w-5xl mx-auto px-5 pt-14 pb-16 md:pt-20 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="text-sm font-medium text-ink/70">Siswa kelas 12 · Teknik Komputer dan Jaringan</p>
+        <h1 class="font-display font-extrabold text-5xl md:text-6xl leading-[1.02] mt-3 tracking-tight">
+          Mukhlisul Amal
+        </h1>
+        <p class="mt-5 text-lg leading-relaxed max-w-md">
+          Saya belajar membangun, mengatur, dan memperbaiki jaringan komputer, dari memasang kabel LAN sampai mengonfigurasi router.
+        </p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="#proyek" class="bg-ink text-paper px-5 py-3 rounded-lg font-semibold hover:bg-cable-blue transition-colors">Lihat proyek saya</a>
+          <a href="#kontak" class="border-2 border-ink px-5 py-3 rounded-lg font-semibold hover:bg-ink hover:text-paper transition-colors">Hubungi saya</a>
+        </div>
+      </div>
+
+      <!-- Diagram topologi jaringan -->
+      <div class="bg-white rounded-2xl border border-ink/10 p-4 shadow-sm">
+        <svg viewBox="0 0 420 320" role="img" aria-label="Diagram jaringan: internet terhubung ke router, switch, lalu tiga komputer" class="w-full h-auto">
+          <!-- kabel -->
+          <g fill="none" stroke-width="4" stroke-linecap="round">
+            <path d="M210 62 V94" stroke="#14213D"/>
+            <path d="M210 134 V176" stroke="#E8851C"/>
+            <path d="M210 216 L80 262" stroke="#2F6FDE"/>
+            <path d="M210 216 V262" stroke="#2E9B5B"/>
+            <path d="M210 216 L340 262" stroke="#E8851C"/>
+          </g>
+          <!-- perangkat -->
+          <g font-family="Instrument Sans, sans-serif" font-size="13" font-weight="600" text-anchor="middle">
+            <ellipse cx="210" cy="40" rx="52" ry="22" fill="#F3F6F8" stroke="#14213D" stroke-width="2"/>
+            <text x="210" y="45" fill="#14213D">Internet</text>
+
+            <rect x="160" y="94" width="100" height="40" rx="8" fill="#14213D"/>
+            <text x="210" y="119" fill="#F3F6F8">Router</text>
+
+            <rect x="160" y="176" width="100" height="40" rx="8" fill="#2F6FDE"/>
+            <text x="210" y="201" fill="#fff">Switch</text>
+
+            <rect x="40"  y="262" width="80" height="36" rx="8" fill="#F3F6F8" stroke="#14213D" stroke-width="2"/>
+            <text x="80"  y="285" fill="#14213D">PC 1</text>
+            <rect x="170" y="262" width="80" height="36" rx="8" fill="#F3F6F8" stroke="#14213D" stroke-width="2"/>
+            <text x="210" y="285" fill="#14213D">PC 2</text>
+            <rect x="300" y="262" width="80" height="36" rx="8" fill="#F3F6F8" stroke="#14213D" stroke-width="2"/>
+            <text x="340" y="285" fill="#14213D">PC 3</text>
+          </g>
+          <!-- paket data: satu-satunya animasi di halaman -->
+          <circle id="paket" r="7" fill="#E8851C" stroke="#fff" stroke-width="2">
+            <animateMotion dur="3.2s" repeatCount="indefinite" path="M210 62 L210 196 L80 276" keyPoints="0;1" keyTimes="0;1" calcMode="linear"/>
+          </circle>
+        </svg>
+      </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section id="tentang" class="max-w-5xl mx-auto px-5 py-14">
+      <div class="grid md:grid-cols-5 gap-8">
+        <h2 class="font-display font-bold text-3xl md:col-span-2">Tentang saya</h2>
+        <div class="md:col-span-3 space-y-4 text-lg leading-relaxed max-w-xl">
+          <p>
+            Halo, saya Mukhlisul Amal, siswa kelas 12 jurusan Teknik Komputer dan Jaringan (TKJ) di <span class="font-semibold">SMK Muhammadiyah 4 Jakarta</span>.
+          </p>
+          <p>
+            Saya tertarik pada cara perangkat saling terhubung: bagaimana data berpindah dari satu komputer ke komputer lain, dan apa yang perlu diatur supaya jaringan tetap stabil dan aman.
+          </p>
+          <p>
+            Selain belajar di kelas dan praktik di laboratorium, saya sudah menjalani Praktik Kerja Lapangan (PKL) untuk melihat langsung bagaimana jaringan dikelola di dunia kerja. Setelah lulus, saya ingin bekerja sebagai teknisi jaringan sambil melanjutkan belajar sertifikasi.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEAHLIAN -->
+    <section id="keahlian" class="bg-white border-y border-ink/10">
+      <div class="max-w-5xl mx-auto px-5 py-14">
+        <h2 class="font-display font-bold text-3xl">Keahlian</h2>
+        <p class="mt-2 text-ink/70 max-w-lg">Yang saya pelajari di sekolah dan saat PKL.</p>
+
+        <div class="mt-8 grid md:grid-cols-3 gap-8">
+          <div class="kabel border-cable-blue pl-5">
+            <h3 class="font-display font-bold text-xl">Jaringan</h3>
+            <ul class="mt-3 space-y-2">
+              <li>Pengalamatan IP dan subnetting</li>
+              <li>Konfigurasi router Mikrotik</li>
+              <li>VLAN dan routing dasar</li>
+              <li>Pemasangan kabel UTP (crimping, tes kabel)</li>
+              <li>Pengaturan access point WiFi</li>
+            </ul>
+          </div>
+          <div class="kabel border-cable-orange pl-5">
+            <h3 class="font-display font-bold text-xl">Sistem dan server</h3>
+            <ul class="mt-3 space-y-2">
+              <li>Instalasi Linux Debian</li>
+              <li>Web server (Apache/Nginx)</li>
+              <li>DNS dan DHCP server</li>
+              <li>Instalasi dan perawatan PC</li>
+              <li>Windows Server dasar</li>
+            </ul>
+          </div>
+          <div class="kabel border-cable-green pl-5">
+            <h3 class="font-display font-bold text-xl">Pendukung</h3>
+            <ul class="mt-3 space-y-2">
+              <li>Cisco Packet Tracer</li>
+              <li>Troubleshooting perangkat dan jaringan</li>
+              <li>Dokumentasi dan pembuatan laporan</li>
+              <li>HTML dan CSS dasar</li>
+              <li>Kerja sama tim</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYEK -->
+    <section id="proyek" class="max-w-5xl mx-auto px-5 py-14">
+      <h2 class="font-display font-bold text-3xl">Proyek</h2>
+      <p class="mt-2 text-ink/70 max-w-lg">Contoh proyek praktik. Ganti dengan proyek milikmu sendiri.</p>
+
+      <div class="mt-8 divide-y divide-ink/15 border-y border-ink/15">
+        <article class="py-7 grid md:grid-cols-5 gap-4">
+          <h3 class="font-display font-bold text-2xl md:col-span-2">Jaringan kantor dengan VLAN</h3>
+          <div class="md:col-span-3">
+            <p class="leading-relaxed">Merancang jaringan untuk tiga divisi kantor yang dipisah dengan VLAN, lengkap dengan routing antar-VLAN dan pengaturan alamat IP. Diuji dengan ping antar perangkat di Cisco Packet Tracer.</p>
+            <p class="mt-3 text-sm font-medium text-cable-blue">Cisco Packet Tracer, VLAN, Subnetting</p>
+          </div>
+        </article>
+
+        <article class="py-7 grid md:grid-cols-5 gap-4">
+          <h3 class="font-display font-bold text-2xl md:col-span-2">Hotspot dan manajemen bandwidth Mikrotik</h3>
+          <div class="md:col-span-3">
+            <p class="leading-relaxed">Mengatur hotspot dengan halaman login dan membatasi kecepatan tiap pengguna memakai simple queue, supaya satu pengguna tidak menghabiskan seluruh kuota jaringan.</p>
+            <p class="mt-3 text-sm font-medium text-cable-orange">Mikrotik, Hotspot, Queue</p>
+          </div>
+        </article>
+
+        <article class="py-7 grid md:grid-cols-5 gap-4">
+          <h3 class="font-display font-bold text-2xl md:col-span-2">Server web lokal di Debian</h3>
+          <div class="md:col-span-3">
+            <p class="leading-relaxed">Membangun server di Debian yang menjalankan web server, DNS, dan DHCP sehingga situs sekolah bisa dibuka lewat nama domain lokal di jaringan laboratorium.</p>
+            <p class="mt-3 text-sm font-medium text-cable-green">Debian, Apache, BIND9, DHCP</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PKL -->
+    <section id="pkl" class="bg-ink text-paper">
+      <div class="max-w-5xl mx-auto px-5 py-14">
+        <h2 class="font-display font-bold text-3xl">Praktik Kerja Lapangan (PKL)</h2>
+        <p class="mt-2 text-paper/75 max-w-xl">
+          <span class="font-semibold text-paper">[Nama Perusahaan/Instansi]</span>, [Kota] · [Bulan Tahun] sampai [Bulan Tahun] (± 3 sampai 6 bulan)
+        </p>
+
+        <div class="mt-9 grid md:grid-cols-2 gap-10">
+          <div>
+            <h3 class="font-display font-bold text-xl">Yang saya kerjakan</h3>
+            <ul class="mt-4 space-y-3 list-disc pl-5 marker:text-cable-orange">
+              <li>Memasang dan merapikan kabel jaringan LAN, termasuk crimping dan tes konektivitas.</li>
+              <li>Mengonfigurasi router dan access point untuk ruangan kantor.</li>
+              <li>Menginstal sistem operasi dan aplikasi di komputer pengguna.</li>
+              <li>Mencari penyebab dan memperbaiki gangguan internet atau perangkat yang rusak.</li>
+              <li>Membantu pemasangan dan pengecekan CCTV.</li>
+              <li>Menyusun laporan harian kegiatan.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-xl">Yang saya dapat</h3>
+            <ul class="mt-4 space-y-3 list-disc pl-5 marker:text-cable-green">
+              <li>Memahami alur kerja teknisi jaringan di dunia kerja nyata.</li>
+              <li>Lebih teliti saat menelusuri masalah jaringan langkah demi langkah.</li>
+              <li>Terbiasa disiplin, bekerja dalam tim, dan berkomunikasi dengan pengguna.</li>
+              <li>Menguasai alat kerja seperti LAN tester, crimping tool, dan kabel UTP.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak" class="max-w-5xl mx-auto px-5 py-14">
+      <h2 class="font-display font-bold text-3xl">Kontak</h2>
+      <p class="mt-3 text-lg max-w-md">Tertarik berdiskusi atau punya peluang magang atau kerja? Hubungi saya lewat:</p>
+      <ul class="mt-6 flex flex-wrap gap-3">
+        <li><a class="inline-block border-2 border-ink px-5 py-3 rounded-lg font-semibold hover:bg-ink hover:text-paper transition-colors" href="https://mail.google.com/mail/?view=cm&to=mukhlisulamal24@gmail.com" target="_blank" rel="noopener">Email</a></li>
+        <li><a class="inline-block border-2 border-ink px-5 py-3 rounded-lg font-semibold hover:bg-ink hover:text-paper transition-colors" href="https://wa.me/6281212500501" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a class="inline-block border-2 border-ink px-5 py-3 rounded-lg font-semibold hover:bg-ink hover:text-paper transition-colors" href="https://instagram.com/mukhliss_24" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-ink/10">
+    <p class="max-w-5xl mx-auto px-5 py-6 text-sm text-ink/70">© 2026 Mukhlisul Amal. Siswa TKJ, SMK Muhammadiyah 4 Jakarta</p>
+  </footer>
+
+  <script>
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.getElementById('paket')?.remove();
+    }
+  </script>
+</body>
+</html>

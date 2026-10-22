@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sixfolio – Portofolio Kelompok 3 XII-TKJ 3</title>
+  <meta name="description" content="Kumpulan portofolio enam siswa Kelompok 3, Kelas XII-TKJ 3, SMK Muhammadiyah 4 Jakarta.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#F3F6F8',
+            ink: '#14213D',
+            cable: { orange: '#E8851C', blue: '#2F6FDE', green: '#2E9B5B' }
+          },
+          fontFamily: {
+            display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
+            body: ['"Instrument Sans"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Instrument Sans', system-ui, sans-serif; }
+    h1, h2, h3 { font-family: 'Bricolage Grotesque', system-ui, sans-serif; }
+
+    a:focus-visible { outline: 3px solid #2F6FDE; outline-offset: 3px; }
+
+    /* Tiap anggota seperti satu port di patch panel, dengan warna kabel sendiri */
+    .port { border-left: 8px solid var(--c); transition: background-color .15s, transform .15s; }
+    .port:hover { background-color: #fff; transform: translateX(6px); }
+    .port .panah { transition: transform .15s; }
+    .port:hover .panah { transform: translateX(4px); }
+    @media (prefers-reduced-motion: reduce) {
+      .port, .port .panah { transition: none; }
+      .port:hover, .port:hover .panah { transform: none; }
+    }
+  </style>
+</head>
+
+<body class="bg-paper text-ink antialiased min-h-screen flex flex-col">
+
+  <header class="max-w-3xl w-full mx-auto px-5 pt-14 pb-8 md:pt-20">
+    <p class="font-display font-bold text-xl">sixfolio<span class="text-cable-orange">.my.id</span></p>
+    <h1 class="font-display font-extrabold text-4xl md:text-6xl leading-[1.05] tracking-tight mt-6">
+      Enam siswa, enam portofolio.
+    </h1>
+    <p class="mt-5 text-lg leading-relaxed max-w-xl">
+      Kelompok 3, Kelas XII-TKJ 3, SMK Muhammadiyah 4 Jakarta. Pilih satu nama untuk melihat portofolionya.
+    </p>
+  </header>
+
+  <main class="max-w-3xl w-full mx-auto px-5 pb-16 flex-1">
+    <nav aria-label="Daftar anggota">
+      <ul class="space-y-3">
+
+        <li>
+          <a href="mukhlisul-amal/" class="port flex items-center justify-between gap-4 rounded-r-xl bg-white/60 border border-l-0 border-ink/10 px-5 py-5" style="--c:#E8851C">
+            <span class="font-display font-bold text-xl md:text-2xl">Mukhlisul Amal</span>
+            <span class="panah text-2xl" aria-hidden="true">→</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="muhammad-farel-nurrizki/" class="port flex items-center justify-between gap-4 rounded-r-xl bg-white/60 border border-l-0 border-ink/10 px-5 py-5" style="--c:#2F6FDE">
+            <span class="font-display font-bold text-xl md:text-2xl">Muhammad Farel Nurrizki</span>
+            <span class="panah text-2xl" aria-hidden="true">→</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="alvi-aldiansyah/" class="port flex items-center justify-between gap-4 rounded-r-xl bg-white/60 border border-l-0 border-ink/10 px-5 py-5" style="--c:#2E9B5B">
+            <span class="font-display font-bold text-xl md:text-2xl">Alvi Aldiansyah</span>
+            <span class="panah text-2xl" aria-hidden="true">→</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="ahmad-yasir-fatahilah/" class="port flex items-center justify-between gap-4 rounded-r-xl bg-white/60 border border-l-0 border-ink/10 px-5 py-5" style="--c:#E8851C">
+            <span class="font-display font-bold text-xl md:text-2xl">Ahmad Yasir Fatahilah</span>
+            <span class="panah text-2xl" aria-hidden="true">→</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="aji-dwi-saiful-muttaqin/" class="port flex items-center justify-between gap-4 rounded-r-xl bg-white/60 border border-l-0 border-ink/10 px-5 py-5" style="--c:#2F6FDE">
+            <span class="font-display font-bold text-xl md:text-2xl">Aji Dwi Saiful Muttaqin</span>
+            <span class="panah text-2xl" aria-hidden="true">→</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="hafiz-ashshidiq/" class="port flex items-center justify-between gap-4 rounded-r-xl bg-white/60 border border-l-0 border-ink/10 px-5 py-5" style="--c:#2E9B5B">
+            <span class="font-display font-bold text-xl md:text-2xl">Hafiz Ashshidiq</span>
+            <span class="panah text-2xl" aria-hidden="true">→</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+  </main>
+
+  <footer class="border-t border-ink/10">
+    <p class="max-w-3xl mx-auto px-5 py-6 text-sm text-ink/70">© 2026 Kelompok 3, XII-TKJ 3, SMK Muhammadiyah 4 Jakarta.</p>
+  </footer>
+
+</body>
+</html>
